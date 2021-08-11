@@ -1,0 +1,37 @@
+aside.col-md-3 {
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem 2rem;
+    margin: 0;
+}
+
+main.col-md-9 {
+    padding: 2rem;
+}
+
+
+h3.nav_pane {
+    margin: 1rem 0rem 1rem;
+}
+
+ul.nav_pane {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 1.5px 0px 1.5px;
+}
+
+hr {
+    border: thin solid;
+}
+
+.nav_ln {
+    color: white;
+}
+
+a.nav_ln:hover {
+    color: white;
+    text-decoration: underline;
+}
