@@ -35,3 +35,7 @@ a.nav_ln:hover {
     color: white;
     text-decoration: underline;
 }
+
+img.pp {
+    padding: 10px;
+}
