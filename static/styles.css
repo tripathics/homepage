@@ -1,0 +1,361 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.2rem;
+}
+
+.container {
+    padding: 2rem 2rem;
+}
+
+body {
+    background-color: #d3e3fa;
+    font-size: 1.05rem;
+}
+
+p {
+    margin: 0.5rem 0;
+    letter-spacing: 0.015rem;
+    line-height: 1.6rem;
+}
+
+ul, ol {
+    line-height: 1.5rem;
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 1.2em 0 1em;
+    letter-spacing: 0.015em;
+}
+
+h3 {
+    margin: 1em 0 0.7em;
+}
+
+h1.title {
+    margin-bottom: 1.2em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #3e54cf;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+#nav-colapse {
+    top: 0;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem;
+    background-color: #b6373e;
+    height: 3rem;
+    border-radius: 0 0 0.5rem;
+}
+
+#nav-items {
+    width: 100%;
+    background-color: #b6373e;
+    position: absolute;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    border-radius: 0 0 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#nav-items li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+#nav-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#nav-items a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+button.menu {
+    background-color: transparent;
+    border: none;
+    border-radius: .275rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0.2rem;
+}
+
+button.menu path, button.menu g {
+    fill: rgb(255, 255, 255);
+}
+
+button.menu:active {
+    background-color: rgb(177, 177, 177);
+}
+
+/* Greet div */
+
+.greet {
+    background-color: transparent;
+    padding: 1.5rem 2rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+h1.profile-name {
+    margin: 0.8rem 0;
+    font-size: 2.1rem;
+}
+
+div.greet p {
+    color: rgb(41, 41, 41);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Profile picture */
+div.pp {
+    border-radius: 50%;
+    width: 35vw;
+    height: 35vw;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+div.social {
+    margin: 0.8rem 0px;
+    display: flex;
+    justify-content: center;
+}
+
+div.social svg {
+    fill: #292929;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0px 5px;
+}
+
+div.social a:active svg {
+    fill: #0f0f0f;
+}
+
+/* Main */
+main {
+    border-radius: 0 0.8rem 0.8rem 0;
+    background-color: #f5f5ff;
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    color: rgb(61, 61, 61);
+    text-align: center;
+}
+
+div.inp-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+}
+
+/* Home */
+[id^="section-"] a {
+    color: black;
+}
+
+[id^="section-"] a:hover {
+    text-decoration: underline;
+}
+
+/* Posts in home */
+
+.wnew {
+    margin-bottom: 1.5rem;
+}
+
+.wnew h3 {
+    margin-bottom: 0.8em;
+}
+
+hr {
+    height: 1px;
+    width: 70%;
+    color: rgb(207, 204, 204);
+    margin: 1.5rem auto 2rem;
+}
+
+/* Featured projects */
+.proj {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.proj > hr {
+    display: none;
+}
+
+.clipart {
+    flex-shrink: 0;
+    margin: 0 0.8rem;
+}
+
+.clipart > img {
+    width: 125px;
+    height: 135px;
+}
+
+@media (max-width: 600px) {
+    .clipart > img {
+        width: 100px;
+        height: 105px;
+    }
+}
+
+@media (max-width: 420px) {
+    .proj {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .proj > hr {
+        margin-top: 0.3rem;
+        margin-bottom: 0;
+        display: block;
+    }
+    .clipart {
+        margin: auto;
+    }
+}
+
+.text > h2, h3 {
+    margin-top: 0;
+}
+
+.text h2 > a, .text h3 > a {
+    color: #313131;
+}
+
+.text > p {
+    margin-bottom: 0;
+}
+
+
+/* Contact form */
+
+form.form-control {
+    width: 85%;
+    margin: auto;
+}
+
+form.form-control > div {
+    margin: 0.5rem 0;
+}
+
+form.form-control input, form.form-control textarea {
+    font-size: 1.05rem;
+    line-height: 1rem;
+    margin-top: 0.35rem;
+    padding: 0.45rem 0.75rem;
+    border: none;
+    background-color: #dadada;
+    display: block;
+}
+
+form.form-control input {
+    border-bottom: 2px solid transparent;
+}
+
+form.form-control textarea {
+    border: 2px solid transparent;
+}
+
+form.form-control input:focus {
+    background-color: #fff;
+    border-bottom: 2px solid rgb(45, 80, 194);
+}
+
+form.form-control textarea:focus {
+    background-color: #fff;
+    border: 2px solid rgb(46, 90, 235);
+}
+
+form.form-control input {
+    width: 100%;
+}
+
+form.form-control textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+
+@media (max-width: 430px) {
+    .form-control {
+        width: 100%;
+    }
+    div.inp-name {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    textarea, input {
+        width: 100%;
+    }
+}
+
+div#todo {
+    width: 30%;
+    min-width: 256px;
+    margin: auto;
+}
+
+/* Todo */
+div#todo > img {
+    width: 100%;
+}
