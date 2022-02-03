@@ -4,11 +4,27 @@
     font-family: 'Lato', sans-serif;
 }
 
+/* For disabling that outline around input boxes */
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+/* For disabling that blue highlight on links */
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
 }
 
 html {
@@ -45,7 +61,7 @@ h2:hover {
 }
 
 h2 {
-    margin: 1.2em 0 1em;
+    margin: 1.2em 0 0.8em;
     letter-spacing: 0.015em;
 }
 
