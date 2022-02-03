@@ -1,7 +1,6 @@
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Lato', sans-serif;
 }
 
 /* For disabling that outline around input boxes */
@@ -13,7 +12,11 @@ button:focus {
 }
 
 /* For disabling that blue highlight on links */
-.noSelect {
+input,
+textarea,
+button,
+select,
+a {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -39,6 +42,7 @@ html {
 body {
     background-color: #d3e3fa;
     font-size: 1.05rem;
+    font-family: 'Lato', sans-serif;
 }
 
 p {
@@ -212,13 +216,6 @@ footer {
     text-align: center;
 }
 
-div.inp-name {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 1rem;
-}
-
 /* Home */
 [id^="section-"] a {
     color: black;
@@ -274,7 +271,7 @@ hr {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 460px) {
     .proj {
         flex-direction: column-reverse;
         gap: 10px;
@@ -307,6 +304,18 @@ hr {
 form.form-control {
     width: 85%;
     margin: auto;
+}
+
+
+div.inp-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+}
+
+div.inp-name > div {
+    flex: 1;
 }
 
 form.form-control > div {
@@ -350,8 +359,20 @@ form.form-control textarea {
     width: 100%;
 }
 
+form.form-control button {
+    padding: 0.4rem 0.6rem;
+    margin: 0.4rem auto;
+    font-size: 1.05rem;
+    border-color: transparent;
+    background-color: #c0c0c0;
+}
 
-@media (max-width: 470px) {
+form.form-control button:active {
+    background-color: #a5a5a5;
+    box-shadow: 0 0 5px 1px #c7b1b1;
+}
+
+@media (max-width: 600px) {
     .form-control {
         width: 100%;
     }
