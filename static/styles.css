@@ -351,7 +351,7 @@ form.form-control textarea {
 }
 
 
-@media (max-width: 430px) {
+@media (max-width: 470px) {
     .form-control {
         width: 100%;
     }
