@@ -12,11 +12,7 @@ button:focus {
 }
 
 /* For disabling that blue highlight on links */
-input,
-textarea,
-button,
-select,
-a {
+input, textarea, button, select, a {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -24,10 +20,6 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.noSelect:focus {
-    outline: none !important;
 }
 
 html {
@@ -40,7 +32,7 @@ html {
 }
 
 body {
-    background-color: #d3e3fa;
+    background-color: #d0e3ff;
     font-size: 1.05rem;
     font-family: 'Lato', sans-serif;
 }
@@ -57,11 +49,6 @@ ul, ol {
 
 h1, h2 {
     font-weight: 600;
-}
-
-h2:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 h2 {
@@ -103,7 +90,6 @@ nav {
     padding: .2rem;
     background-color: #b6373e;
     height: 3rem;
-    border-radius: 0 0 0.5rem;
 }
 
 #nav-items {
@@ -149,7 +135,7 @@ button.menu path, button.menu g {
 }
 
 button.menu:active {
-    background-color: rgb(177, 177, 177);
+    background-color: #912228;
 }
 
 /* Greet div */
@@ -158,16 +144,17 @@ button.menu:active {
     background-color: transparent;
     padding: 1.5rem 2rem 1rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 h1.profile-name {
-    margin: 0.8rem 0;
+    margin: 0 0 0.8rem;
     font-size: 2.1rem;
 }
 
 div.greet p {
-    color: rgb(41, 41, 41);
+    color: #2e2e2e;
+    margin: 0 0 0.8rem;
 }
 
 img {
@@ -183,17 +170,17 @@ div.pp {
     max-width: 200px;
     max-height: 200px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
 }
 
 div.social {
-    margin: 0.8rem 0px;
+    margin: 0 0 0.8rem;
     display: flex;
     justify-content: center;
 }
 
 div.social svg {
-    fill: #292929;
+    fill: #2e2e2e;
     width: 1.5em;
     height: 1.5em;
     margin: 0px 5px;
@@ -205,14 +192,14 @@ div.social a:active svg {
 
 /* Main */
 main {
-    border-radius: 0 0.8rem 0.8rem 0;
-    background-color: #f5f5ff;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #f3f3f3;
 }
 
 /* Footer */
 footer {
     background-color: transparent;
-    color: rgb(61, 61, 61);
+    color: #2e2e2e;
     text-align: center;
 }
 
@@ -260,18 +247,18 @@ hr {
 }
 
 .clipart > img {
-    width: 125px;
+    width: 135px;
     height: 135px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .clipart > img {
         width: 100px;
-        height: 105px;
+        height: 100px;
     }
 }
 
-@media (max-width: 460px) {
+@media screen and (max-width: 460px) {
     .proj {
         flex-direction: column-reverse;
         gap: 10px;
@@ -323,6 +310,7 @@ form.form-control > div {
 }
 
 form.form-control input, form.form-control textarea {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.05rem;
     line-height: 1rem;
     margin-top: 0.35rem;
@@ -364,15 +352,23 @@ form.form-control button {
     margin: 0.4rem auto;
     font-size: 1.05rem;
     border-color: transparent;
-    background-color: #c0c0c0;
+    background-color: #c4c4c4;
+}
+
+form.form-control button:focus {
+    background-color: #afadad;
+}
+
+form.form-control button:hover {
+    background-color: #b3b3b3;
 }
 
 form.form-control button:active {
-    background-color: #a5a5a5;
-    box-shadow: 0 0 5px 1px #c7b1b1;
+    background-color: #979797;
+    box-shadow: 0 0 5px 1px #666666;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .form-control {
         width: 100%;
     }
@@ -395,4 +391,63 @@ div#todo {
 /* Todo */
 div#todo > img {
     width: 100%;
+}
+
+/* Grid layout */
+
+@supports(display: grid) {
+    @media screen and (min-width: 925px) {
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                "grt nv"
+                "grt mn"
+                "ftr mn";
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 3rem 1fr;
+        }
+        
+        .greet {
+            grid-area: grt;
+            vertical-align: bottom;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        nav {
+            grid-area: nv;
+        }
+    
+        nav #nav-colapse {
+            border-radius: 0;
+        }
+        
+        main {
+            grid-area: mn;
+            border-radius: 0;
+            height: calc(100vh - 3rem);
+            min-height: calc(500px - 3rem);
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            scroll-padding-top: 1.2rem;
+            border-radius: 0;
+        }
+        
+        footer {
+            grid-area: ftr;
+        } 
+    }
+}
+@supports not(display: grid) {
+    main {
+        width: 70%;
+        margin: auto;
+    }
+    
+    @media screen and (max-width: 700px) {
+        main {
+            width: 100%;
+        }
+    }
 }
