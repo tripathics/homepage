@@ -25,4 +25,4 @@ do
 done
 
 rm tmp;
-cp /home/shyam/projects/ganesha/homepage/static ./ -r;
+cp /home/shyam/projects/homepage-grid/static ./ -r;
