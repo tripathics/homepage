@@ -289,7 +289,7 @@ hr {
 /* Contact form */
 
 form.form-control {
-    max-width: 600px;
+    width: 85%;
     margin: auto;
 }
 
@@ -427,7 +427,7 @@ div#todo > img {
             grid-area: mn;
             border-radius: 0;
             height: calc(100vh - 3rem);
-            min-height: calc(550px - 3rem);
+            min-height: calc(500px - 3rem);
             overflow-y: scroll;
             scroll-behavior: smooth;
             scroll-padding-top: 1.2rem;
