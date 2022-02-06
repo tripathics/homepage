@@ -2,7 +2,7 @@ var body = document.body;
 
 function toggleMenu() {
     let navColapse = document.getElementById('nav-colapse');
-    let navItems = document.getElementById('nav-items');
+    let navItems = document.getElementById('nav-exp-items');
     navItems.classList.toggle('hidden');
     let btn = document.getElementById('menu-btn');
 

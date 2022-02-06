@@ -82,47 +82,72 @@ a:hover {
 
 nav {
     position: sticky;
+    font-size: 1.2em;
     top: 0;
 }
 
-#nav-colapse {
+/* Nav bar on top */
+#nav-bar {
     top: 0;
     display: flex;
     flex-flow: row-reverse;
     align-items: center;
-    justify-content: space-between;
     padding: .2rem;
     background-color: #b6373e;
     height: 3rem;
 }
 
-#nav-items {
-    width: 100%;
-    background-color: #b6373e;
-    position: absolute;
-    font-size: 1.2em;
-    padding-bottom: 0.5em;
-    border-radius: 0 0 0.5rem;
+/* Nav items within nav bar */
+#nav-colapse-items {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin-right: 1rem;
 }
 
-.hidden {
-    display: none;
-}
-
-#nav-items li {
+#nav-colapse-items li {
+    display: inline-block;
     list-style-type: none;
-    margin-bottom: 1rem;
 }
 
-#nav-items a {
+#nav-colapse-items a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
 }
 
-#nav-items a:hover {
+#nav-colapse-items a:hover {
     text-decoration: underline;
     text-decoration-color: #ffffff;
+}
+
+/* Nav items within expanded nav */
+#nav-exp-items {
+    width: 100%;
+    background-color: #b6373e;
+    position: absolute;
+    padding-bottom: 0.5em;
+    border-radius: 0 0 0.5rem;
+}
+
+#nav-exp-items li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+#nav-exp-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#nav-exp-items a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.hidden {
+    display: none;
 }
 
 button.menu {
@@ -140,6 +165,30 @@ button.menu path, button.menu g {
 
 button.menu:active {
     background-color: #912228;
+}
+
+@media screen and (max-width: 550px){
+    #nav-colapse-items {
+        display: none;
+    }
+
+    button.menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #nav-colapse-items {
+        display: flex;
+    }
+
+    button.menu {
+        display: none;
+    }
+
+    #nav-exp-items {
+        display: none;
+    }
 }
 
 /* Greet div */
@@ -428,7 +477,7 @@ div#todo > img {
             grid-area: nv;
         }
     
-        nav #nav-colapse {
+        nav #nav-bar {
             border-radius: 0;
         }
         

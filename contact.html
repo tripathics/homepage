@@ -13,21 +13,33 @@
     
     <link rel="stylesheet" href="static/styles.css">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
+    <link rel="manifest" href="./static/site.webmanifest">
+
     <title>Chandrashekhar Tripathi </title>
 </head>
 <body class="grid-container">
     <!-- Navigation -->
     <nav class="grid-item">
-        <div id="nav-colapse">
+        <div id="nav-bar">
             <button id="menu-btn" class="menu" onclick="toggleMenu()" aria-label="Menu button">
                 <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
                     <title>Menu</title>
                     <path d="M10 80h80a5 5 0 000-10H10a5 5 0 000 10zm0-25h80a5 5 0 000-10H10a5 5 0 000 10zM5 25a5 5 0 005 5h80a5 5 0 000-10H10a5 5 0 00-5 5z" fill="currentColor"/>
                 </svg>
             </button>
-            
+            <ul id="nav-colapse-items">
+                <li><a href="./">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./posts.html">Posts</a></li>
+                <li><a href="./galary.html">Galary</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
         </div>
-        <div id="nav-items" class="hidden">
+        <div id="nav-exp-items" class="hidden">
             <ul>
                 <li><a href="./">Home</a></li>
                 <li><a href="./projects.html">Projects</a></li>
