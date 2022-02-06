@@ -1,3 +1,7 @@
+:root {
+    font-size: 16px;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -198,6 +202,11 @@ main {
 
 /* Footer */
 footer {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    height: 4rem;
     background-color: transparent;
     color: #2e2e2e;
     text-align: center;
@@ -400,11 +409,11 @@ div#todo > img {
         .grid-container {
             display: grid;
             grid-template-areas: 
-                "grt nv"
+                "nul nv"
                 "grt mn"
                 "ftr mn";
             grid-template-columns: 2fr 3fr;
-            grid-template-rows: 3rem 1fr;
+            grid-template-rows: 3rem minmax(530px - 7rem, 1fr) 4rem;
         }
         
         .greet {
@@ -427,7 +436,7 @@ div#todo > img {
             grid-area: mn;
             border-radius: 0;
             height: calc(100vh - 3rem);
-            min-height: calc(500px - 3rem);
+            min-height: 530px;
             overflow-y: scroll;
             scroll-behavior: smooth;
             scroll-padding-top: 1.2rem;
