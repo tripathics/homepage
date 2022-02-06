@@ -36,7 +36,7 @@ html {
 }
 
 body {
-    background-color: #353535;
+    background-color: #333333;
     font-family: 'Lato', sans-serif;
     font-size: 1.025rem;
 }
@@ -93,6 +93,7 @@ nav {
     flex-flow: row-reverse;
     align-items: center;
     padding: .2rem;
+    border-radius: 0 0 0 0.8rem;
     /* background-color: #b6373e; */
     background-color: #252525;
     height: 3rem;
@@ -129,7 +130,7 @@ nav {
     background-color: #252525;
     position: absolute;
     padding-bottom: 0.5em;
-    border-radius: 0 0 0.5rem;
+    border-radius: 0 0 0 0.8rem;
 }
 
 #nav-exp-items li {
@@ -166,7 +167,7 @@ button.menu path, button.menu g {
 }
 
 button.menu:active {
-    background-color: #912228;
+    background-color: #0f0f0f;
 }
 
 @media screen and (max-width: 550px){
@@ -228,7 +229,7 @@ div.pp {
     max-height: 200px;
     overflow: hidden;
     margin: 0 auto 1rem;
-    box-shadow: 0 0 3px black;
+    box-shadow: 0 0 4px 1px #0a0a0a;
 }
 
 div.social {
@@ -251,7 +252,7 @@ div.social a:active svg {
 
 /* Main */
 main {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0.8rem 0.8rem 0;
     margin-right: 0.3rem;
     background-color: #f3f3f3;
 }
@@ -485,19 +486,18 @@ div#todo > img {
         }
     
         nav #nav-bar {
-            border-radius: 0;
+            border-radius: 0 0 0 0.8rem;
         }
         
         main {
             grid-area: mn;
-            border-radius: 0;
+            border-radius: 0.8rem 0 0;
             margin: 0;
             height: calc(100vh - 3rem);
             min-height: 530px;
             overflow-y: scroll;
             scroll-behavior: smooth;
             scroll-padding-top: 1.2rem;
-            border-radius: 0;
         }
         
         footer {
