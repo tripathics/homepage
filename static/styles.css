@@ -36,9 +36,9 @@ html {
 }
 
 body {
-    background-color: #d0e3ff;
-    font-size: 1.05rem;
+    background-color: #353535;
     font-family: 'Lato', sans-serif;
+    font-size: 1.025rem;
 }
 
 p {
@@ -48,7 +48,7 @@ p {
 }
 
 ul, ol {
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
 
 h1, h2 {
@@ -93,7 +93,8 @@ nav {
     flex-flow: row-reverse;
     align-items: center;
     padding: .2rem;
-    background-color: #b6373e;
+    /* background-color: #b6373e; */
+    background-color: #252525;
     height: 3rem;
 }
 
@@ -124,7 +125,8 @@ nav {
 /* Nav items within expanded nav */
 #nav-exp-items {
     width: 100%;
-    background-color: #b6373e;
+    /* background-color: #b6373e; */
+    background-color: #252525;
     position: absolute;
     padding-bottom: 0.5em;
     border-radius: 0 0 0.5rem;
@@ -201,12 +203,14 @@ button.menu:active {
 }
 
 h1.profile-name {
+    color: #fff;
     margin: 0 0 0.8rem;
     font-size: 2.1rem;
 }
 
 div.greet p {
-    color: #2e2e2e;
+    /* color: #2e2e2e; */
+    color: #efefef;
     margin: 0 0 0.8rem;
 }
 
@@ -218,12 +222,13 @@ img {
 /* Profile picture */
 div.pp {
     border-radius: 50%;
-    width: 35vw;
-    height: 35vw;
+    width: 30vw;
+    height: 30vw;
     max-width: 200px;
     max-height: 200px;
     overflow: hidden;
     margin: 0 auto 1rem;
+    box-shadow: 0 0 3px black;
 }
 
 div.social {
@@ -233,19 +238,21 @@ div.social {
 }
 
 div.social svg {
-    fill: #2e2e2e;
+    /* fill: #2e2e2e; */
+    fill: #eee;
     width: 1.5em;
     height: 1.5em;
     margin: 0px 5px;
 }
 
 div.social a:active svg {
-    fill: #0f0f0f;
+    fill: #ffffff;
 }
 
 /* Main */
 main {
     border-radius: 0 1rem 1rem 0;
+    margin-right: 0.3rem;
     background-color: #f3f3f3;
 }
 
@@ -257,7 +264,7 @@ footer {
     line-height: 1rem;
     height: 4rem;
     background-color: transparent;
-    color: #2e2e2e;
+    color: #ededed;
     text-align: center;
 }
 
@@ -369,8 +376,8 @@ form.form-control > div {
 
 form.form-control input, form.form-control textarea {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.05rem;
-    line-height: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     margin-top: 0.35rem;
     padding: 0.45rem 0.75rem;
     border: none;
@@ -484,6 +491,7 @@ div#todo > img {
         main {
             grid-area: mn;
             border-radius: 0;
+            margin: 0;
             height: calc(100vh - 3rem);
             min-height: 530px;
             overflow-y: scroll;
