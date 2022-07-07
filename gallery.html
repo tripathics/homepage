@@ -5,25 +5,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="static/script.js"></script>
+    <script src="./static/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="./static/styles.css">
+    
+    <link rel="stylesheet" href="./static/post.css">
+    <!-- highlightjs -->    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="alternate stylesheet" title="Github" href="styles/github.css">
+    <script>hljs.highlightAll();</script>
+
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
-    <link rel="manifest" href="./static/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./static/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./static/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./static/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./static/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Chandrashekhar Tripathi | Galary</title>
+    <title>Chandrashekhar Tripathi Post</title>
 </head>
 <body class="grid-container">
     <!-- Navigation -->
-    <nav class="grid-item">
+    <nav>
         <div id="nav-bar">
             <button id="menu-btn" class="menu" onclick="toggleMenu()" aria-label="Menu button">
                 <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -35,7 +49,7 @@
                 <li><a href="./">Home</a></li>
                 <li><a href="./projects.html">Projects</a></li>
                 <li><a href="./posts.html">Posts</a></li>
-                <li><a href="./galary.html">Galary</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
@@ -44,15 +58,15 @@
                 <li><a href="./">Home</a></li>
                 <li><a href="./projects.html">Projects</a></li>
                 <li><a href="./posts.html">Posts</a></li>
-                <li><a href="./galary.html">Galary</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-            </ul>                              
+            </ul>
         </div>
     </nav>
     <!-- Greet -->
-    <div class="greet grid-item">
+    <div class="greet ">
         <div class="pp">
-            <img src="static/media/pp2.jpeg" alt="Chandrashekhar Tripathi" height="200" width="200">
+            <img src="static/media/pp1.jpeg" alt="Chandrashekhar Tripathi" height="200" width="200">
         </div>
         <h1 class="profile-name">Chandrashekhar Tripathi</h1>
         <p>A tech geek, coding enthusiast, photographer and traveller</p>
@@ -76,18 +90,22 @@
         </div>
     </div>
     <!-- Main body -->
-    <main class="container grid-item">
+    <main>
      
-        
-<h1 id="section-g1" class="title"><a href="#section-g1">Photo Galary</a></h1>
-<div id="todo">
-    <img src="./static/media/comingsoon.png" alt="Coming soon">
-</div>
+
+<header class="head-container">
+    <h1 id="section-g0" class="title"><a href="#section-g0">Photo Gallery</a></h1>
+</header>
+<section class="container">
+    <div id="todo">
+        <img src="./static/media/comingsoon.png" alt="Coming soon">
+    </div>
+</section>
 
 
     </main>
     <!-- Footer -->
-    <footer class="grid-item">
+    <footer>
         &copy; 2021-Present Chandrashekhar Tripathi
     </footer>
 </body>

@@ -2,7 +2,7 @@
 
 # Download the pages
 LINK=http://localhost:5000/;
-PAGES='projects posts galary contact';
+PAGES='projects posts gallery contact';
 
 curl "${LINK}" > index.html;
 
