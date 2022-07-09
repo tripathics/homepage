@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# create backup of old files
+mkdir old;
+mv *.html old;
+mv static old;
+
 # Download the pages
 LINK=http://localhost:5000/;
-PAGES='projects posts gallery contact';
+PAGES='projects posts gallery contact post';
 
 curl "${LINK}" > index.html;
 
@@ -12,7 +17,7 @@ do
 done
 
 # Set the hrefs properly
-FILES='index.html projects.html posts.html galary.html contact.html';
+FILES='index.html projects.html posts.html gallery.html contact.html';
 for FILE in $FILES
 do
     for PAGE in $PAGES
