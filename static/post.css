@@ -2,11 +2,11 @@
 section.post-ctnr {
     --heading-top-margin: 2.2rem;
 }
-
+/* 
 .post-ctnr {
     transition: all 0.15s ease-in-out;
     margin-right: 3rem;
-}
+} */
 
 h1.profile-name {
     color: white;
@@ -26,7 +26,7 @@ aside.toc-wrapper {
 
 /* toc wrapper */
 div.toc {
-    margin-top: var(--heading-top-margin);
+    margin: var(--heading-top-margin) 1rem var(--main-offset) 0;
 }
 
 /* toc heading */
@@ -143,7 +143,7 @@ blockquote strong:first-child {
         .post-ctnr {
             display: grid;
             column-gap: 2rem;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 13rem);
+            grid-template-columns: minmax(0, 1fr) minmax(0, 14rem);
             grid-template-areas: "txt toc";
         }
 
@@ -160,7 +160,6 @@ blockquote strong:first-child {
             position: sticky;
             top: calc(var(--main-offset) + var(--heading-top-margin));
             max-height: calc(100vh - var(--main-offset));
-            margin-bottom: var(--main-offset);
             overflow: auto;
         }
     }
