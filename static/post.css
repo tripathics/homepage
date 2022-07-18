@@ -2,11 +2,6 @@
 section.post-ctnr {
     --heading-top-margin: 2.2rem;
 }
-/* 
-.post-ctnr {
-    transition: all 0.15s ease-in-out;
-    margin-right: 3rem;
-} */
 
 h1.profile-name {
     color: white;
@@ -45,6 +40,7 @@ div.toc ul {
 div.toc li {
     font-size: 0.833rem;
     padding: 0.5rem 1rem;
+    margin: 0;
     color: var(--gray-7);
     border-left: solid 2px var(--gray-45);
     transition: font-weight 0.05s ease-in,
@@ -128,6 +124,13 @@ div.post img {
 /* tips */
 blockquote strong:first-child {
     font-weight: 650;
+}
+
+/* Blockquote */
+blockquote {
+    border-left: solid 4px var(--gray-4);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 1.5rem;
 }
 
 /* Grid layout */

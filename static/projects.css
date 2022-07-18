@@ -136,12 +136,6 @@ a:hover {
     text-decoration: underline;
 }
 
-time {
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: var(--gray-7);
-}
-
 .button {
     padding: 0.4rem 0.6rem;
     font-size: 0.8rem;
@@ -159,21 +153,6 @@ time {
 
 .button:active {
     border: 2px solid black;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: auto;
-}
-
-.card.anchored {
-    position: relative;
-    padding-bottom: 3rem;
-}
-
-.links.anchored {
-    position: absolute;
-    bottom: 1rem;
 }
 
 /********** Navigation **********/
@@ -419,22 +398,28 @@ h1 > a:hover, h2 > a:hover, h3 > a:hover {
 
 /* Posts in home */
 
-.home-posts .card {
+.card {
     background-color: var(--gray-25);
     padding: 1.5rem;
     border-radius: 0.25rem;
 }
 
-.home-posts .card h3 {
+.card time {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--gray-7);
+}
+
+.card h3 {
     margin: 0.5rem 0;
     font-size: 1.1rem;
 }
 
-.home-posts .card a {
+.card a {
     color: black;
 }
 
-.home-posts .card a:hover {
+.card a:hover {
     text-decoration: underline;
 }
 
@@ -497,46 +482,12 @@ hr {
     margin: 1.5rem auto 2rem;
 }
 
-/********* Featured projects ********/
-
-.home-projects .card {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-}
-
-.home-projects .image-wrapper {
-    max-width: 250px;
-    max-height: 250px;
-}
-
-.proj-desc time {
-    font-weight: 600;
-}
-
-.proj-desc h3 {
-    line-height: 1.15;
-    font-size: 1.35rem;
-    margin: 0.2rem 0;
-}
-
-.proj-desc p {
-    line-height: 1.2;
-    font-size: 0.9rem;
-    color: var(--gray-8);
-}
-
-.home-projects .card .button {
-    background-color: var(--gray-05);
-    color: var(--gray-8);
-    font-weight: 550;
-    border-color: var(--gray-4);
-}
-/*
+/* Featured projects */
 .proj {
     display: flex;
     flex-direction: row;
     margin: 2rem 0;
+    /* margin-bottom: 2rem; */
 }
 
 .proj > hr {
@@ -582,10 +533,11 @@ hr {
 .text > p {
     margin-bottom: 0;
 }
-*/
 
 /* Resume */
-.resume .image-wrapper img {
+.image-wrapper img {
+    width: 100%;
+    height: auto;
     max-width: 1200px;
 }
 
@@ -600,11 +552,53 @@ div#todo > img {
     width: 100%;
 }
 
-
 /* Grid layout */
 
 @supports(display: grid) {
-    /* Main website grid layout */
+    .images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.4rem;
+    }
+    @media screen and (max-width: 1200px) and (min-width: 925px) {
+        .images {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media screen and (max-width: 710px) {
+        .images {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media screen and (max-width: 535px) {
+        .images {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (max-width: 370px) {
+        .image {
+            width: 135px;
+            height: 135px;
+        }
+    }
+
+    .home-posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    @media screen and (max-width: 1130px) {
+        .home-posts {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (max-width: 550px) {
+        .home-posts {
+            grid-template-columns: 1fr;
+        }
+    }
+
     @media screen and (min-width: 925px) {
         .grid-container {
             display: grid;
@@ -644,94 +638,11 @@ div#todo > img {
             grid-area: ftr;
         }
     }
-
-    /* images under Interests */
-    .images {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.4rem;
-    }
-    @media screen and (max-width: 1200px) and (min-width: 925px) {
-        .images {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media screen and (max-width: 710px) {
-        .images {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media screen and (max-width: 535px) {
-        .images {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    @media screen and (max-width: 370px) {
-        .image {
-            width: 135px;
-            height: 135px;
-        }
-    }
-
-    /* What's new posts */
-    .home-posts {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-    @media screen and (max-width: 1130px) {
-        .home-posts {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    @media screen and (max-width: 550px) {
-        .home-posts {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /* Featured Projects */
-    .home-projects {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    @media screen and (max-width: 1130px) {
-        .home-projects {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media screen and (max-width: 925px) and (min-width: 711px) {
-        .home-projects {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-    @media screen and (max-width: 710px) and (min-width: 551px) {
-        .home-projects {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media screen and (max-width: 550px) {
-        .home-projects {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
 }
 @supports not (display: grid) {
     main {
         width: 70%;
         margin: auto;
-    }
-
-    .home-posts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: flex-start;
-    }
-    
-    .home-posts .card {
-        width: 15rem;
     }
     
     @media screen and (max-width: 700px) {
@@ -741,4 +652,3 @@ div#todo > img {
     }
 }
 
-/* not supports grid */
