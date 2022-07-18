@@ -1,0 +1,23 @@
+h2.year {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: rgb(121 154 77);
+
+}
+
+div.posts > a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration-color: var(--gray-8);
+    align-items: baseline;
+}
+
+div.posts > a > h3 {
+    color: var(--gray-8)    
+}
+
+div.posts > a > time {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--gray-7);
+}

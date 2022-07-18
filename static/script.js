@@ -12,20 +12,41 @@ function toggleMenu() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const id = entry.target.getAttribute('id');
-            if (entry.intersectionRatio > 0) {
-                document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.add('current');
-            } else {
-                document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.remove('current');
-            }
-        });
-    });
+// window.addEventListener('DOMContentLoaded', () => {
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             const id = entry.target.getAttribute('id');
+//             if (entry.intersectionRatio > 0) {
+//                 document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.add('current');
+//             } else {
+//                 document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.remove('current');
+//             }
+//         });
+//     });
 
-    // Track all sections that have an `id` applied
-	document.querySelectorAll('section[id]').forEach((section) => {
-		observer.observe(section);
-	});
+//     // Track all sections that have an `id` applied
+// 	document.querySelectorAll('section[id]').forEach((section) => {
+// 		observer.observe(section);
+// 	});
+// })
+
+document.addEventListener('DOMContentLoaded', () => {
+    let mainNavLinks = document.querySelectorAll('div.toc li a');
+    
+    window.addEventListener('scroll', e => {
+        let fromTop = window.scrollY + 96;
+    
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+    
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.parentElement.classList.add('current');
+            } else {
+                link.parentElement.classList.remove('current');
+            }
+        })
+    });
 })

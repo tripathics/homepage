@@ -7,7 +7,7 @@ mv static old;
 
 # Download the pages
 LINK=http://localhost:5000/;
-PAGES='projects posts gallery contact post';
+PAGES='projects posts gallery contact first-coding-environment-setup python-for-c-programmers';
 
 curl "${LINK}" > index.html;
 
@@ -17,12 +17,12 @@ do
 done
 
 # Set the hrefs properly
-FILES='index.html projects.html posts.html gallery.html contact.html';
+FILES='index.html projects.html posts.html gallery.html contact.html first-coding-environment-setup.html python-for-c-programmers.html';
 for FILE in $FILES
 do
     for PAGE in $PAGES
     do
-        OLD="href=\"\/${PAGE}\"";
+        OLD="href=\".\/${PAGE}\"";
         NEW="href=\".\/${PAGE}.html\"";
         sed s/$OLD/$NEW/ $FILE > tmp;
         cp tmp $FILE;

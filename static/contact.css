@@ -1,0 +1,102 @@
+/*********** Contact ***********/
+
+form.form-control {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+div.inp-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+}
+
+div.inp-name > div {
+    flex: 1;
+}
+
+div.inp-name > div:first-child {
+    margin: 0;
+    margin-right: 1rem;
+}
+
+form.form-control > div {
+    margin-bottom: 0.8rem;
+}
+
+form.form-control input, form.form-control textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-top: 0.35rem;
+    padding: 0.45rem 0.75rem;
+    border: none;
+    background-color: var(--gray-3);
+    display: block;
+}
+
+form.form-control input {
+    border-bottom: 2px solid transparent;
+}
+
+form.form-control textarea {
+    border: 2px solid transparent;
+}
+
+form.form-control input:focus {
+    background-color: #fff;
+    border-bottom: 2px solid var(--green-5);
+}
+
+form.form-control textarea:focus {
+    background-color: #fff;
+    border: 2px solid var(--green-5);
+}
+
+form.form-control input {
+    width: 100%;
+}
+
+form.form-control textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+form.form-control button {
+    padding: 0.4rem 0.6rem;
+    margin: 0.4rem auto;
+    font-size: 1.05rem;
+    border-color: transparent;
+    background-color: #c4c4c4;
+}
+
+form.form-control button:focus {
+    background-color: #afadad;
+}
+
+form.form-control button:hover {
+    background-color: #b3b3b3;
+}
+
+form.form-control button:active {
+    background-color: #979797;
+    box-shadow: 0 0 5px 1px #666666;
+}
+
+@media screen and (max-width: 600px) {
+    .form-control {
+        width: 100%;
+    }
+    div.inp-name {
+        flex-direction: column;
+    }
+    div.inp-name > div:first-child {
+        margin: 0 0 0.8rem;
+    }
+
+    textarea, input {
+        width: 100%;
+    }
+}

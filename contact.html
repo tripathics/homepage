@@ -10,10 +10,12 @@
     <!-- open seriff font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./static/styles.css">
     
+<link rel="stylesheet" href="./static/contact.css">
+
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/favicons/apple-touch-icon.png">
@@ -26,7 +28,7 @@
     <meta name="msapplication-config" content="./static/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Contact | Chandrashekhar Tripathi</title>
+    <title>Contact |  Chandrashekhar Tripathi</title>
 </head>
 <body class="grid-container">
     <!-- Navigation -->
@@ -87,32 +89,34 @@
             
 
 <header class="head-container">
-    <h1 id="section-c0" class="title"><a href="#section-c0">Contact Me</a></h1>
+    <h1 id="section-c0"><a href="#section-c0">Contact Me</a></h1>
 </header>
-<form class="form-control" action="/contact" method="post">
-    <div class="inp-name">
+<section class="container">
+    <form class="form-control" action="/contact" method="post">
+        <div class="inp-name">
+            <div>
+                <label for="first-name">First name</label>
+                <input name="first-name" type="text" placeholder="John">
+            </div>
+            <div>
+                <label for="last-name">Last name</label>
+                <input name="last-name" type="text" placeholder="Doe">
+            </div>
+        </div>
+    
         <div>
-            <label for="first-name">First name</label>
-            <input name="first-name" type="text" placeholder="John">
+            <label for="email">Email</label>
+            <input name="email" type="email" placeholder="my@email.com">
         </div>
         <div>
-            <label for="last-name">Last name</label>
-            <input name="last-name" type="text" placeholder="Doe">
+            <label for="message">Message</label>
+            <textarea name="message" cols="40" rows="10" placeholder="My message to you"></textarea>
         </div>
-    </div>
-
-    <div>
-        <label for="email">Email</label>
-        <input name="email" type="email" placeholder="my@email.com">
-    </div>
-    <div>
-        <label for="message">Message</label>
-        <textarea name="message" cols="40" rows="10" placeholder="My message to you"></textarea>
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-</form>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</section>
 
 
     </main>

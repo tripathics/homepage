@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./static/script.js"></script>
+    
+    <!-- open seriff font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/styles.css">
+    
+
+    <script src="./static/post.js"></script>
+    <!-- space mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/post.css">
+    <!-- highlightjs -->    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script> -->
+    
+    <link rel="stylesheet" href="./static/hljs/default.min.css">
+    <link rel="stylesheet" href="./static/vs.css">
+    <script src="./static/hljs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <script>hljs.highlightAll();</script>
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./static/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./static/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./static/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./static/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>
+    Setting up your first coding environment | 
+ Chandrashekhar Tripathi</title>
+</head>
+<body class="grid-container">
+    <!-- Navigation -->
+    <nav>
+        <div id="nav-bar">
+            <button id="menu-btn" class="menu" onclick="toggleMenu()" aria-label="Menu button">
+                <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <title>Menu</title>
+                    <path d="M10 80h80a5 5 0 000-10H10a5 5 0 000 10zm0-25h80a5 5 0 000-10H10a5 5 0 000 10zM5 25a5 5 0 005 5h80a5 5 0 000-10H10a5 5 0 00-5 5z" fill="currentColor"/>
+                </svg>
+            </button>
+            <ul id="nav-colapse-items">
+                <li><a href="./">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./posts.html">Posts</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div id="nav-exp-items" class="hidden">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./posts.html">Posts</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Greet -->
+    <div class="greet ">
+        <div class="pp">
+            <img src="./static/media/pp1.jpeg" alt="Chandrashekhar Tripathi" height="200" width="200">
+        </div>
+        <h1 class="profile-name">Chandrashekhar Tripathi</h1>
+        <p>A tech geek, coding enthusiast, photographer and traveller</p>
+        <div class="social">
+            <a href="https://github.com/tripathics/" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <title>GitHub</title>
+                    <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/chandrashekhar-tripathi-1aa1a6201" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.326 65.326">
+                    <title>LinkedIn</title>
+                    <path id="Path_2520" data-name="Path 2520" d="M958.98,112.559h-9.6V97.525c0-3.585-.064-8.2-4.993-8.2-5,0-5.765,3.906-5.765,7.939v15.294h-9.6V81.642h9.216v4.225h.129a10.1,10.1,0,0,1,9.093-4.994c9.73,0,11.524,6.4,11.524,14.726ZM918.19,77.416a5.571,5.571,0,1,1,5.57-5.572,5.571,5.571,0,0,1-5.57,5.572m4.8,35.143h-9.61V81.642h9.61Zm40.776-55.2h-55.21a4.728,4.728,0,0,0-4.781,4.67v55.439a4.731,4.731,0,0,0,4.781,4.675h55.21a4.741,4.741,0,0,0,4.8-4.675V62.025a4.738,4.738,0,0,0-4.8-4.67" transform="translate(-903.776 -57.355)"/></svg>
+            </a>
+            <a href="https://www.instagram.com/c_strip.z/" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98 98">
+                    <title>Instagram</title>
+                    <path xmlns="http://www.w3.org/2000/svg" d="M66.004 18c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97c-3.18 0-5.76 2.577-5.76 5.758 0 3.18 2.58 5.76 5.76 5.76 3.18 0 5.76-2.58 5.76-5.76 0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C79.617 90.645 90.65 79.613 90.65 66S79.616 41.35 66.003 41.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z" transform="translate(-17 -17)"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- Main body -->
+    <main>
+    
+
+<header class="head-container">
+    
+<h1 id="section-p0"><a href="#section-p0">Setting up your first coding environment</a></h1>
+<h3>Prerequisites</h3>
+<ul>
+<li>Using interactive websites on browsers.</li>
+<li>Basic knowledge to install a program from a wizard based installer.</li>
+</ul>
+<h3>What you'll need</h3>
+<ul>
+<li>A computer with Linux (preferrably Debian or Ubuntu), Windows or MacOS</li>
+<li>An active internet connection.</li>
+</ul>
+<h3>After reading this article, you'll be able to</h3>
+<ul>
+<li>Install Visual Studio Code</li>
+<li>Install Compilers for C and C++</li>
+<li>Set up a workspace in vscode</li>
+</ul>
+
+</header>
+
+<section class="post-ctnr">
+    
+    <section class="post">
+        
+
+<section id="introduction" class="container">
+<h2><a href="#introduction">Introduction</a></h2>
+<p>To make a computer program, one typically starts by writing the <a href="https://en.wikipedia.org/wiki/Source_code" target="_blank">source code</a> in a text editor, compiling it into a binary and finally running the program.<br>
+Now all of this can be done if you have:</p>
+<ul>
+<li>a text editor (like Notepad in windows)</li>
+<li>a command line terminal (command prompt) and</li>
+<li>a compiler or interpreter depending on the language.</li>
+</ul>
+<p>An <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">Integrated Development Environment (IDE)</a> is an application that provides all these tools in a single place. A typical IDE contains source code editor, terminal, file browser and a debugger. There are many IDEs available out there but I will be installing <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> which is free and open-source and developed by Microsoft.</p>
+</section>
+
+
+<section id="downloading-and-installing-vscode" class="container">
+<h2><a href="#downloading-and-installing-vscode">Downloading and Installing VSCode</a></h2>
+<p>VSCode is available on Windows, Linux and MacOS platforms. <a href="https://code.visualstudio.com/Download">Download the vscode installer</a> for your platform.</p>
+<p>In windows, you need to run the installer and follow the wizard, in MacOS, you have to move the application downloaded to the applications folder.</p>
+<p>For Ubuntu or other Debian based systems, you can install using <code>apt</code> in the terminal.</p>
+<pre><code class="language-console">~$ cd Downloads
+~/Downloads$ sudo apt-get install ./code_1.69.0-1657183742_amd64.deb
+</code></pre>
+</section>
+
+
+<section id="installing-cc-compilers" class="container">
+<h2><a href="#installing-cc-compilers">Installing C/C++ compilers</a></h2>
+<p>Now that you have vscode installed, you will be able to write your code. All you need is a compiler to compile that source code into machine language program which will then run on the computer.</p>
+<p>For C/C++, we will be using the <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection">GNU Compilers (<code>gcc</code> and <code>g++</code>)</a> on Windows and Linux.</p>
+<h3 id="gcc-on-linux-ubuntu-or-debian"><a href="#gcc-on-linux-ubuntu-or-debian">GCC on Linux (Ubuntu or Debian)</a></h3>
+<ul>
+<li>
+<p>To verity whether GCC is installed, open a terminal window and enter the command</p>
+<pre><code class="language-console">$ gcc -v
+</code></pre>
+</li>
+<li>
+<p>If GCC isn't installed, update your system's package list and install the GNU compiler tools and the GDB debugger with this command:</p>
+<pre><code class="language-console">$ sudo apt-get update
+$ sudo apt-get install build-essential gdb
+</code></pre>
+</li>
+</ul>
+<h3 id="gcc-on-windows-using-msys"><a href="#gcc-on-windows-using-msys">GCC on Windows using MSYS</a></h3>
+<ul>
+<li>
+<p>Get the latest version of Mingw-w64 (Minimal GNU for Windows) via MSYS2. Mingw is a toolset which provides GNU softwares for windows including GCC. <a href="https://github.com/msys2/msys2-installer/releases/download/2022-01-18/msys2-x86_64-20220118.exe" target="_blank">Download the MSYS2 installer</a>. Open the installer and follow the wizard to complete installation. Check the <em>run MSYS2 64bit now</em> checkbox in the end and click on Finish.</p>
+</li>
+<li>
+<p>In the MSYS command line window, update package databases and base packages.</p>
+<pre><code class="language-console">$ pacman -Syu
+</code></pre>
+</li>
+<li>
+<p>Run &quot;MSYS2 MSYS&quot; from start menu and update the rest of the base packages.</p>
+<pre><code class="language-console">$ pacman -Syu
+</code></pre>
+</li>
+<li>
+<p>Now MSYS2 is ready to install packages. Install mingw-w64 GCC to start compiling:</p>
+<pre><code class="language-console">$ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+</code></pre>
+</li>
+</ul>
+<h3 id="clang-on-macos"><a href="#clang-on-macos">Clang on MacOS</a></h3>
+<ul>
+<li>
+<p>In MacOS, we will use Clans/LLVM compiler. To check whether it is installed, run the following command in terminal</p>
+<pre><code class="language-console">$ clang --version
+</code></pre>
+</li>
+<li>
+<p>If Clang isn't installed, install the command line developer tools by entering the command in terminal</p>
+<pre><code class="language-console">$ xcode-select --install
+</code></pre>
+</li>
+</ul>
+</section>
+
+
+<section id="getting-familiar-with-vscode" class="container">
+<h2><a href="#getting-familiar-with-vscode">Getting familiar with VSCode</a></h2>
+<h3 id="vs-code-user-interface"><a href="#vs-code-user-interface">VS Code User Interface</a></h3>
+<p><img src="./static/media/posts/vscode-ui-overview.png" alt="VS Code UI"></p>
+<p>VS Code UI is divided into five areas:</p>
+<ul>
+<li><strong>Editor</strong> - The main area to edit your files. Multiple editors (files) can be opened side by side.</li>
+<li><strong>Side bar</strong> - Contains different views like Explorer, Source Control, Search, Run and Debug, Extensions</li>
+<li><strong>Status Bar</strong> - Information about opened project and files you edit.</li>
+<li><strong>Activity Bar</strong> - Enables to switch between different views.</li>
+<li><strong>Panels</strong> - Contains the integrated terminal, output panel, debug console and problems panel which shows errors and warnings. It can be moved to right.</li>
+</ul>
+<blockquote>
+<p><strong>Tip:</strong> Toggle the panel using <kbd>Ctrl</kbd>-<kbd>J</kbd> or <kbd>⌘</kbd>-<kbd>J</kbd> shortcut.<br>
+Toggle the <strong>integrated terminal</strong>, using <kbd>Ctrl</kbd>-<kbd>`</kbd> or <kbd>⌘</kbd>-<kbd>`</kbd> shortcut.</p>
+</blockquote>
+<h3 id="activity-bar"><a href="#activity-bar">Activity Bar</a></h3>
+<p><img src="./static/media/posts/activity-bar-context-menu.png" alt="Activity bar context menu"></p>
+<p>It lets you switch between different views. Buttons can be added or removed and their order can be changed by dragging them. To hide the view (side bar) from screen, press <kbd>Ctrl</kbd>-<kbd>B</kbd> on Windows or <kbd>⌘</kbd>-<kbd>B</kbd> on MacOS.</p>
+<h3 id="command-palette"><a href="#command-palette">Command palette</a></h3>
+<p><img src="./static/media/posts/command-palette.png" alt="Command Palette"></p>
+<p>Anything on vscode can be done with the Command Palette which can be accessed with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd> on Windows or with <kbd>⌘</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd> on MacOS.</p>
+<blockquote>
+<p><strong>Tip:</strong> Using <kbd>Ctrl</kbd>-<kbd>P</kbd> on windows or <kbd>⌘</kbd>-<kbd>P</kbd> on MacOS can be used for navigating to any file or symbol by typing its name</p>
+</blockquote>
+</section>
+
+
+<section id="configuring-vscode" class="container">
+<h2><a href="#configuring-vscode">Configuring VSCode</a></h2>
+<h3 id="install-extensions"><a href="#install-extensions">Install the extensions</a></h3>
+<p>Install C/C++ extension to enable support for C/C++ development which includes syntax highlighting, autocomplete suggestions, automated build and debugging etc.</p>
+<h4>Installing from command pallete</h4>
+<ol>
+<li>Open vscode.</li>
+<li>The extension can also be installed by typing the following command in the command pallete (<kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>):<pre><code>ext install ms-vscode
+</code></pre>
+</li>
+</ol>
+<h4>Installing from the Extensions view</h4>
+<ol>
+<li>Open VSCode</li>
+<li>Select extensions view from the activity bar in the left</li>
+<li>Search for <strong>C/C++</strong> in the extensions view and select the one provided by Microsoft.</li>
+<li>Install the extension by clicking on the install button.</li>
+</ol>
+<h3 id="create-projects-folder"><a href="#create-projects-folder">Create projects folder</a></h3>
+<p>Create a folder (say projects/) where you'll be saving all your codes and open that folder in vscode.</p>
+<ol>
+<li>Open vscode</li>
+<li>In the menu bar, select the <strong>File</strong> option.</li>
+<li>Click on <strong>Open Folder...</strong></li>
+<li>Browse the system to open the folder you just created. This folder now becomes your workspace.</li>
+</ol>
+</section>
+
+
+<section id="writing-your-first-program" class="container">
+<h2><a href="#writing-your-first-program">Writing your first program</a></h2>
+<h3 id="writing-the-code"><a href="#writing-the-code">Writing the code</a></h3>
+<ol>
+<li>
+<p>In the <strong>File Explorer</strong> view, hover over your folder name and four action icons will appear. Click on the 'New file' icon.</p>
+</li>
+<li>
+<p>Set the filename to <code>hello.c</code>.</p>
+</li>
+<li>
+<p>Write the hello world program in C in <code>hello.c</code> file.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;hello, world\n&quot;);
+    return 0;
+}
+</code></pre>
+<p>When writing the code you'll notice that vscode is showing you autocomplete suggestions and syntax highlighting. This is enabled by that C/C++ extension which you installed earlier.</p>
+</li>
+<li>
+<p>Save changes to your file (<kbd>Ctrl</kbd>-<kbd>S</kbd> in windows and <kbd>⌘</kbd>-<kbd>S</kbd> in macos).</p>
+</li>
+</ol>
+<h3 id="compilation"><a href="#compilation">Compilation</a></h3>
+<h4>Using <code>gcc</code> CLI from vscode terminal (recommended for learners)</h4>
+<ol>
+<li>
+<p>In the menu bar, click on <strong>Terminal</strong> followed by <strong>New Terminal</strong> (<kbd>Ctrl</kbd>-<kbd>`</kbd> in windows or <kbd>⌘</kbd>-<kbd>`</kbd> on macos). This will open a new terminal in vscode.</p>
+</li>
+<li>
+<p>The terminal opens in the folder or directory which you have opened in vscode.</p>
+</li>
+<li>
+<p>The most basic syntax for <code>gcc</code> cli is</p>
+<pre><code class="language-console">$ gcc srcfile.c -o outfile
+</code></pre>
+<ul>
+<li><code>srcfile.c</code> is the source file, which is <code>hello.c</code> here</li>
+<li><code>-o</code> meaning 'out' is an option to gcc. It places the compilation output into the filename which follows it i.e. <code>outfile</code>.</li>
+<li><code>outfile</code> is the executable of binary file which is the final program that runs on the machine.
+<ul>
+<li>
+<p>In windows, every executable has a .exe <a href="https://en.wikipedia.org/wiki/Filename_extension" target="_blank">filename extension</a>. So if you are using windows, compile using</p>
+<pre><code class="language-console">$ gcc hello.c -o hello.exe
+</code></pre>
+<p>The output file in windows will thus be <code>hello.exe</code></p>
+</li>
+<li>
+<p>In Linux or MacOS, there is no need for a filename extension. Compile using</p>
+<pre><code class="language-console">$ gcc hello.c -o hello
+</code></pre>
+<p>The output file is <code>hello</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4>Compilation by shortcut</h4>
+<ol>
+<li>In the menu bar, select <strong>Terminal</strong> followed by <strong>Configure Default Build Task...</strong></li>
+<li>Select the default compiler for compiling all C source codes i.e. <code>gcc</code> in this case.</li>
+<li>A new <code>task.json</code> file will be created in <code>.vscode</code> folder where the default compiler and some other configurations will be set. Compilation can be customized further from this file. Close this file and return to <code>hello.c</code> in vscode.</li>
+<li>Now you can compile any C source code by keeping it open in vscode and pressing <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> in windows or <kbd>⌘</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> in macos.</li>
+</ol>
+<p>After compilation, notice in the <strong>Explorer</strong> view (<kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>E</kbd> in windows or <kbd>⌘</kbd>-<kbd>Shift</kbd>-<kbd>E</kbd> in macos if it is not open), the executable file has been created.</p>
+<h3 id="executing-the-program"><a href="#executing-the-program">Executing the program</a></h3>
+<ol>
+<li>Open the vscode integrated terminal <kbd>Ctrl</kbd>-<kbd>`</kbd> or <kbd>⌘</kbd>-<kbd>`</kbd>.</li>
+<li>Run the executable file from terminal, the output will print just below the prompt:
+<ul>
+<li>In Linux/MacOS:<pre><code class="language-console">$ ./hello
+hello world
+</code></pre>
+</li>
+<li>In Windows<pre><code class="language-console">$ ./hello.exe
+hello world
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+
+
+<section id="writing-more-programs" class="container">
+<h2><a href="#writing-more-programs">Writing more programs</a></h2>
+<p>With the workspace setup, you can now create another source file from <strong>File Explorer</strong> view, write some code, compile it from the terminal or using <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> or <kbd>⌘</kbd>-<kbd>Shift</kbd>-<kbd>B</kbd> and run the program by running <code>filename.exe</code> or simply <code>filename</code>.</p>
+<p>e.g. creating a <code>helloagain.c</code> program will be like this:</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;hello again world!\n&quot;);
+    return 0;
+}
+</code></pre>
+<p>and then compilation and execution</p>
+<pre><code class="language-console">$ gcc helloagain.c -o helloagain
+$ ./helloagain
+hello again world!
+</code></pre>
+</section>
+
+
+<section id="references" class="container">
+<h2><a href="#references">References</a></h2>
+<p>This article was made possible with the help of <a href="https://code.visualstudio.com/docs/" target="_blank">Visual Studio code docs</a> Visit this documentation page to learn more about vscode features like debugging and configuration.</p>
+
+</section>
+
+    </section>
+    <aside class="toc-wrapper">
+        <div class="toc">
+            <h2>In this article</h2>
+            
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#downloading-and-installing-vscode">Downloading and Installing VSCode</a></li>
+<li><a href="#installing-cc-compilers">Installing C/C++ compilers</a></li>
+<li><a href="#getting-familiar-with-vscode">Getting familiar with VSCode</a></li>
+<li><a href="#configuring-vscode">Configuring VSCode</a></li>
+<li><a href="#writing-your-first-program">Writing your first program</a></li>
+<li><a href="#writing-more-programs">Writing more programs</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+        </div>
+    </aside>
+
+
+</section>
+
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        &copy; 2021-Present Chandrashekhar Tripathi
+    </footer>
+</body>
+</html>
