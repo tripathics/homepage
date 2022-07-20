@@ -57,8 +57,10 @@
     --main-offset: var(--nav-height);
     --page-offset: calc(var(--main-offset) + var(--main-header-height));
 
+    --mobile-ctnr-side-padding: 1.5rem;
+
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--main-offset) + 0.5rem);
+    scroll-padding-top: calc(var(--main-offset) + 0.8rem);
     font-size: 16px;
 }
 
@@ -82,18 +84,20 @@ input, textarea, button, select, a {
 }
 
 body {
+    font-family: 'Inter', sans-serif;
     background-color: var(--gray-8);
-    font-family: 'Open Sans', sans-serif;
+}
+
+p, li {
+    letter-spacing: -.01rem;
+    line-height: 1.6;
 }
 
 p {
     margin: 0.5rem 0;
-    letter-spacing: -0.01rem;
-    line-height: 1.6rem;
 }
 
 ul, ol {
-    line-height: 1.6rem;
     padding-left: 1.5rem;
 }
 
@@ -103,6 +107,7 @@ li {
 }
 
 h1, h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: -0.03rem;
     font-weight: 600;
 }
@@ -279,18 +284,20 @@ button.menu:active {
     background-color: transparent;
     padding: 1.5rem 2rem 1rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 h1.profile-name {
     color: white;
     margin: 0 0 0.8rem;
     font-size: 2rem;
+    line-height: 1.05;
 }
 
 div.greet p {
     color: var(--gray-3);
     margin: 0 0 0.8rem;
+    line-height: 1.2;
 }
 
 img {
@@ -464,11 +471,11 @@ h1 > a:hover, h2 > a:hover, h3 > a:hover {
 @media screen and (max-width: 710px) {
     .container {
         margin: 1rem 0 2rem;
-        padding: 0 2rem;
+        padding: 0 var(--mobile-ctnr-side-padding);
     }
 
     .head-container {
-        padding: 2rem 2rem 0.8rem;
+        padding: 2rem var(--mobile-ctnr-side-padding) 0.8rem;
     }
 
     p.hero-description {
@@ -516,7 +523,8 @@ hr {
 
 .proj-desc h3 {
     line-height: 1.15;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+    font-weight: 400;
     margin: 0.2rem 0;
 }
 
@@ -532,57 +540,6 @@ hr {
     font-weight: 550;
     border-color: var(--gray-4);
 }
-/*
-.proj {
-    display: flex;
-    flex-direction: row;
-    margin: 2rem 0;
-}
-
-.proj > hr {
-    display: none;
-}
-
-.clipart {
-    flex-shrink: 0;
-    margin: 0 1.5rem;
-}
-
-.clipart > img {
-    width: 135px;
-    height: 135px;
-}
-
-@media screen and (max-width: 600px) {
-    .clipart > img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media screen and (max-width: 460px) {
-    .proj {
-        flex-direction: column-reverse;
-    }
-    .proj > hr {
-        margin-top: 0.3rem;
-        margin-bottom: 0;
-        display: block;
-    }
-    .clipart {
-        margin: auto;
-        margin-top: 10px;
-    }
-}
-
-.text h2 > a, .text h3 > a {
-    color: #313131;
-}
-
-.text > p {
-    margin-bottom: 0;
-}
-*/
 
 /* Resume */
 .resume .image-wrapper img {
@@ -605,6 +562,15 @@ div#todo > img {
 
 @supports(display: grid) {
     /* Main website grid layout */
+    @media screen and (max-width: 1140px) {
+        h1.profile-name {
+            font-size: 1.6rem;
+        }
+        div.pp {
+            max-width: 175px;
+            max-height: 175px;
+        }
+    }
     @media screen and (min-width: 925px) {
         .grid-container {
             display: grid;
@@ -644,6 +610,9 @@ div#todo > img {
             grid-area: ftr;
         }
     }
+
+    /* greet */
+
 
     /* images under Interests */
     .images {
