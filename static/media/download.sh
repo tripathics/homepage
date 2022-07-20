@@ -1,7 +1,33 @@
-PART="https://raw.githubusercontent.com/tripathics/homepage/main/static/media/";
+#!/bin/bash
 
-for IMG in "comingsoon.png" "dna.png" "filter.png" "loanenq.png" "pp.jpeg" "speller.png" "todo.png" "typing-game.png"
+# create backup of old files
+mkdir old;
+mv *.html old;
+mv static old;
+
+# Download the pages
+LINK=http://localhost:5000/;
+PAGES='projects posts gallery contact first-coding-environment-setup python-for-c-programmers';
+
+curl "${LINK}" > index.html;
+
+for PAGE in $PAGES
 do
-    LINK="${PART}${IMG}";
-    curl $LINK > $IMG;
+    curl "${LINK}${PAGE}" > "${PAGE}.html";
 done
+
+# Set the hrefs properly
+FILES='index.html projects.html posts.html gallery.html contact.html first-coding-environment-setup.html python-for-c-programmers.html';
+for FILE in $FILES
+do
+    for PAGE in $PAGES
+    do
+        OLD="href=\".\/${PAGE}\"";
+        NEW="href=\".\/${PAGE}.html\"";
+        sed s/$OLD/$NEW/ $FILE > tmp;
+        cp tmp $FILE;
+    done
+done
+
+rm tmp;
+cp /home/shyam/projects/homepage-grid/static ./ -r;
