@@ -22,4 +22,6 @@ div.posts > a > time {
     font-family: monospace;
     font-size: 0.8rem;
     color: var(--gray-7);
+    min-width: 5rem;
+    direction: rtl;
 }
