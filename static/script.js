@@ -12,41 +12,33 @@ function toggleMenu() {
     }
 }
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     const observer = new IntersectionObserver(entries => {
-//         entries.forEach(entry => {
-//             const id = entry.target.getAttribute('id');
-//             if (entry.intersectionRatio > 0) {
-//                 document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.add('current');
-//             } else {
-//                 document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.remove('current');
-//             }
-//         });
-//     });
+window.addEventListener('DOMContentLoaded', () => {
+    let categories = document.getElementById('skill-category').children;
+    let categoriesCount = document.getElementById('skill-category').childElementCount;
+    
+    for (let i = 0; i < categoriesCount; i++) {
+        categories[i].addEventListener('click', (e) => {
+            let currCategory = e.target;
+            let categoryClass = currCategory.id;
 
-//     // Track all sections that have an `id` applied
-// 	document.querySelectorAll('section[id]').forEach((section) => {
-// 		observer.observe(section);
-// 	});
-// })
+            // remove active class from other categories
+            for (let i = 0; i < categoriesCount; i++) {
+                categories[i].classList.remove('active');
+            }
+            // add active class to curerntly clicked category
+            if (!currCategory.classList.contains('active')) {
+                currCategory.classList.add('active');
+            }
 
-document.addEventListener('DOMContentLoaded', () => {
-    let mainNavLinks = document.querySelectorAll('div.toc li a');
-    
-    window.addEventListener('scroll', e => {
-        let fromTop = window.scrollY + 96;
-    
-        mainNavLinks.forEach(link => {
-            let section = document.querySelector(link.hash);
-    
-            if (
-                section.offsetTop <= fromTop &&
-                section.offsetTop + section.offsetHeight > fromTop
-            ) {
-                link.parentElement.classList.add('current');
-            } else {
-                link.parentElement.classList.remove('current');
+            // hide all classes except for category class
+            let skills = document.getElementsByClassName('skill');
+            for (let i = 0; i < skills.length; i++) {
+                if (!skills[i].classList.contains(categoryClass)) {
+                    skills[i].style.display = 'none';
+                } else {
+                    skills[i].style.display = 'block';
+                }
             }
         })
-    });
+    }
 })
