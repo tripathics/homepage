@@ -70,12 +70,10 @@
 /* reset font boosting on mobile browsers */
 html * {
     max-height: 1000000px;
-}
-html, body {
-    text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
+    text-size-adjust: auto;
+    -webkit-text-size-adjust: auto;
+    -moz-text-size-adjust: auto;
+    -ms-text-size-adjust: auto;
 }
 
 *, ::before, ::after {
