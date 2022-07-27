@@ -13,32 +13,56 @@ function toggleMenu() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    let categories = document.getElementById('skill-category').children;
-    let categoriesCount = document.getElementById('skill-category').childElementCount;
+    let category = document.getElementById('skill-category');
+    if (category) {
+        let categories = category.children;
+        let categoriesCount = document.getElementById('skill-category').childElementCount;
     
-    for (let i = 0; i < categoriesCount; i++) {
-        categories[i].addEventListener('click', (e) => {
-            let currCategory = e.target;
-            let categoryClass = currCategory.id;
-
-            // remove active class from other categories
-            for (let i = 0; i < categoriesCount; i++) {
-                categories[i].classList.remove('active');
-            }
-            // add active class to curerntly clicked category
-            if (!currCategory.classList.contains('active')) {
-                currCategory.classList.add('active');
-            }
-
-            // hide all classes except for category class
-            let skills = document.getElementsByClassName('skill');
-            for (let i = 0; i < skills.length; i++) {
-                if (!skills[i].classList.contains(categoryClass)) {
-                    skills[i].style.display = 'none';
-                } else {
-                    skills[i].style.display = 'block';
+        for (let i = 0; i < categoriesCount; i++) {
+            categories[i].addEventListener('click', (e) => {
+                let currCategory = e.target;
+                let categoryClass = currCategory.id;
+    
+                // remove active class from other categories
+                for (let i = 0; i < categoriesCount; i++) {
+                    categories[i].classList.remove('active');
                 }
+                // add active class to curerntly clicked category
+                if (!currCategory.classList.contains('active')) {
+                    currCategory.classList.add('active');
+                }
+    
+                // hide all classes except for category class
+                let skills = document.getElementsByClassName('skill');
+                for (let i = 0; i < skills.length; i++) {
+                    if (!skills[i].classList.contains(categoryClass)) {
+                        skills[i].style.display = 'none';
+                    } else {
+                        skills[i].style.display = 'block';
+                    }
+                }
+            })
+        }
+    }
+
+    const skillsCategory = document.getElementsByClassName('category')[0];
+    if (skillsCategory) {
+        skillsCategory.addEventListener('scroll', () => {
+            const left = document.getElementById('slide-left');
+            const right = document.getElementById('slide-right');
+    
+            if (skillsCategory.scrollLeft == 0) {
+                left.style.fill = 'var(--gray-4)';
+            } else {
+                left.style.fill = 'var(--gray-8)';
             }
+    
+            if (skillsCategory.scrollWidth - skillsCategory.scrollLeft - 1 <= skillsCategory.clientWidth) {
+                right.style.fill = 'var(--gray-4)';
+            } else {
+                right.style.fill = 'var(--gray-8)';
+            }
+
         })
     }
 })

@@ -446,6 +446,9 @@ p.hero-description {
     flex-direction: row;
 }
 
+.category-wrapper > .slide {
+    display: none;
+}
 .category > ul {
     padding: 0;
     list-style-type: none;
@@ -509,10 +512,34 @@ p.hero-description {
     }
 }
 @media screen and (max-width: 710px) {
+    .category-wrapper {
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        height: 2.8rem;
+    }
+    .category-wrapper > .slide {
+        display: block;
+    }
     .category {
         overflow-x: auto;
         height: fit-content;
+        padding-bottom: 1.2rem;
+        box-sizing: content-box;
     }
+    .slide:first-child {
+        left: -1rem;
+    }
+    .slide:last-child {
+        right: -1rem;
+    }
+    #slide-left {
+        fill: var(--gray-4);
+    }
+    #slide-right {
+        fill: var(--gray-8);
+    }
+
     .category > ul {
         display: flex;
         flex-direction: row;
