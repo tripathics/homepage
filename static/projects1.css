@@ -1,0 +1,38 @@
+.projects {
+    margin-top: 10rem;
+    /*! display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project {
+    position: relative;
+    /*! margin: 0 0 8rem; */
+}
+
+.desc {
+    position: relative;
+    color: black;
+}
+
+.project-img {
+    position: absolute;
+    opacity: 0.4;
+    margin: auto;
+    height: auto;
+    max-width: 320px;
+    left: 0;
+    right: 0;
+    top: -8rem;
+}
+
+.desc h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.desc p {
+    width: 380px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+}

@@ -3,17 +3,6 @@ section.post-ctnr {
     --heading-top-margin: 2.2rem;
 }
 
-h1.profile-name {
-    color: white;
-    margin: 0 0 0.8rem;
-    font-size: 1.6rem;
-}
-
-div.pp {
-    max-width: 175px;
-    max-height: 175px;
-}
-
 /******* Table of contents *******/
 aside.toc-wrapper {
     display: none;
@@ -136,12 +125,6 @@ blockquote {
 /* Grid layout */
 
 @supports(display: grid) {
-    @media screen and (min-width: 1000px) {
-        .grid-container {
-            grid-template-columns: minmax(21rem, 1fr) minmax(0, 3fr);
-        }
-    }
-    
     @media screen and (min-width: 900px) {
         .post-ctnr {
             display: grid;
