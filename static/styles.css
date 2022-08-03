@@ -99,7 +99,9 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--gray-8);
     color: var(--font-color-base);
-    padding: 0 calc(50vw - 850px);
+    max-width: 1700px;
+    margin: auto;
+    box-shadow: 0 0 8px 1px var(--gray-9);
 }
 
 p, li {
@@ -737,9 +739,7 @@ div#todo > img {
                 "grt mn"
                 "ftr mn"
                 "nl1 mn";
-            /* grid-template-columns: minmax(21rem, 2fr) minmax(0, 5fr); */
             grid-template-columns: minmax(21rem, 1fr) minmax(0, 3fr);
-
             grid-template-rows: var(--main-offset) 530px calc(100vh - var(--main-offset) - var(--greet-height)) auto;
         }
         
