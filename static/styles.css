@@ -681,6 +681,11 @@ hr {
     max-height: var(--hp-card-len);
 }
 
+.home-projects .image-wrapper img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 .proj-desc time {
     font-weight: 600;
 }
